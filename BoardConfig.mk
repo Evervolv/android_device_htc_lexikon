@@ -34,6 +34,9 @@ TARGET_BOOTLOADER_BOARD_NAME := lexikon
 BOARD_USE_NEW_LIBRIL_HTC := true
 BOARD_HAS_EXTRA_SYS_PROPS := true
 
+BOARD_USES_QCOM_AUDIO_VOIPMUTE := false
+BOARD_USES_QCOM_AUDIO_RESETALL := false
+
 # Kernel
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
@@ -41,7 +44,7 @@ BOARD_KERNEL_BASE := 0x04a00000
 BOARD_KERNEL_PAGE_SIZE := 4096
 
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
-TARGET_KERNEL_CONFIG := lexikon_defconfig
+TARGET_KERNEL_CONFIG := evervolv_lexikon_defconfig
 KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-linux-linaro-4.7/bin/arm-eabi-
 
 BOARD_USES_GENLOCK := true

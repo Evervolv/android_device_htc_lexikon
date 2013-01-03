@@ -44,3 +44,5 @@
 /dev/qmi2               0640    radio       radio
 /dev/smd_pkt_loopback	0640    radio       radio
 /dev/smd_sns_dsps	0640    radio       radio
+
+/dev/genlock		0666    root	    root

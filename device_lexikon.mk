@@ -31,7 +31,8 @@ PRODUCT_COPY_FILES += \
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
     device/htc/lexikon/prebuilt/ramdisk/init.lexikon.rc:root/init.lexikon.rc \
-    device/htc/lexikon/prebuilt/ramdisk/ueventd.lexikon.rc:root/ueventd.lexikon.rc
+    device/htc/lexikon/prebuilt/ramdisk/ueventd.lexikon.rc:root/ueventd.lexikon.rc \
+    device/htc/lexikon/prebuilt/ramdisk/initlogo.rle:root/initlogo.rle
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/lexikon/lexikon-vendor.mk)
@@ -42,16 +43,16 @@ PRODUCT_COPY_FILES += \
 
 # Input config files
 PRODUCT_COPY_FILES += \
-    device/htc/lexikon/prebuilt/system/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
-    device/htc/lexikon/prebuilt/system/usr/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
-    device/htc/lexikon/prebuilt/system/usr/idc//lexikon-keypad.idc:system/usr/idc/lexikon-keypad.idc \
-    device/htc/lexikon/prebuilt/system/usr/keylayout/lexikon-keypad.kl:system/usr/keylayout/lexikon-keypad.kl
+    device/htc/lexikon/prebuilt/system/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
+    device/htc/lexikon/prebuilt/system/usr/idc/lexikon-keypad.idc:system/usr/idc/lexikon-keypad.idc
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
     device/htc/lexikon/prebuilt/system/usr/keychars/lexikon-keypad.kcm:system/usr/keychars/lexikon-keypad.kcm \
+    device/htc/lexikon/prebuilt/system/usr/keylayout/lexikon-keypad.kl:system/usr/keylayout/lexikon-keypad.kl \
     device/htc/lexikon/prebuilt/system/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl\
-    device/htc/lexikon/prebuilt/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl
+    device/htc/lexikon/prebuilt/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/lexikon/prebuilt/system/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
 # Firmware
 PRODUCT_COPY_FILES += \
@@ -73,8 +74,8 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \

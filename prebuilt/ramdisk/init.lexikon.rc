@@ -1,17 +1,21 @@
-on boot
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
-    mkdir /data/radio 0770 radio radio
+import init.htc7x30.usb.rc
 
-on fs
+on early-init
+    export EXTERNAL_STORAGE /mnt/sdcard
+    mkdir /mnt/sdcard 0000 system system
+    symlink /mnt/sdcard /sdcard
+
+on early-fs
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
-    mount ext4 /dev/block/mmcblk0p25 /system wait ro barrier=1
-    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nosuid nodev barrier=1 noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
-    mount ext4 /dev/block/mmcblk0p28 /local wait noatime nosuid nodev barrier=1
-    mount ext4 /dev/block/mmcblk0p29 /devlog wait noatime nosuid nodev barrier=1
+
+    mount ext4 /dev/block/mmcblk0p25 /system wait ro noatime nodiratime barrier=0 nouser_xattr
+    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nodiratime nosuid nodev barrier=0 noauto_da_alloc nouser_xattr
+    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
+    mount ext4 /dev/block/mmcblk0p28 /local wait noatime nodiratime nosuid nodev barrier=0
+    mount ext4 /dev/block/mmcblk0p39 /devlog wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
 
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/wifi 0770 wifi wifi

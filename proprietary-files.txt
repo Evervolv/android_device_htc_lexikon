@@ -42,6 +42,7 @@ lib/libgsl.so
 lib/libposteffect.so 
 lib/libgemini.so 
 lib/libmmipl.so 
+lib/libmmjpeg.so
 
 # Radio
 lib/libhtc_ril.so
