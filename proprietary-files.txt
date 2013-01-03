@@ -24,10 +24,18 @@ lib/libcamera.so
 lib/liboemcamera.so
 
 # Graphics
+lib/egl/eglsubAndroid.so 
 lib/egl/libEGL_adreno200.so 
 lib/egl/libGLESv1_CM_adreno200.so 
-lib/egl/libGLESv2_adreno200.so oi
-lib/egl/libq3dtools_adreno200.so 
+lib/egl/libGLESv2_adreno200.so 
+lib/egl/libGLESv2S3D_adreno200.so 
+lib/egl/libq3dtools_adreno200.so   
+lib/libsc-a2xx.so
+lib/libc2d2_z180.so
+lib/libC2D2.so 
+lib/libOpenVG.so 
+lib/libOpenMAXAL.so 
+lib/libOpenSLES.so 
 
 # Media libraries
 lib/libgsl.so 
@@ -38,4 +46,3 @@ lib/libmmipl.so
 # Radio
 lib/libhtc_ril.so
 lib/libims_ril.so 
-lib/libreference-ril.so 

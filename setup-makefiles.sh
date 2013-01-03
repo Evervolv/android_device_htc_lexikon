@@ -27,8 +27,9 @@ DISM=`egrep -c '(^#|^$)' proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
 for FILE in `egrep -v '(^#|^$)' ../$DEVICE/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
-
-  echo "	$OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
+  if [ $FILE = lib/libaudioalsa.so ]; then
+  echo "	$OUTDIR/proprietary/$FILE:obj/$FILE$LINEEND" >> $MAKEFILE; else
+  echo "	$OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE; fi
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
