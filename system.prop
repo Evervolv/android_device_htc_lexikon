@@ -52,8 +52,8 @@ wifi.interface=wlan0
 wifi.supplicant_scan_interval=45
 
 #Welly_Fang_01/05/2010
-ro.cdma.home.operator.numeric = 310012
-#ro.cdma.home.operator.numeric = 311220 (US Cellular)
+# ro.cdma.home.operator.numeric = 310012 # (VZW)
+ro.cdma.home.operator.numeric = 311220 # (US Cellular)
 ro.cdma.home.operator.alpha = Verizon
 
 mobiledata.interfaces=rmnet0
