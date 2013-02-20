@@ -31,8 +31,7 @@ PRODUCT_COPY_FILES += \
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
     device/htc/lexikon/prebuilt/ramdisk/init.lexikon.rc:root/init.lexikon.rc \
-    device/htc/lexikon/prebuilt/ramdisk/ueventd.lexikon.rc:root/ueventd.lexikon.rc \
-    device/htc/lexikon/prebuilt/ramdisk/initlogo.rle:root/initlogo.rle
+    device/htc/lexikon/prebuilt/ramdisk/ueventd.lexikon.rc:root/ueventd.lexikon.rc
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/lexikon/lexikon-vendor.mk)
