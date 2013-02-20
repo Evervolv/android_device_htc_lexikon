@@ -27,6 +27,9 @@
 # inherit from common msm7x30
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
+# inherit wifi defines
+-include device/htc/msm7x30-common/bcm4329.mk
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lexikon
 
