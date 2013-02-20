@@ -117,6 +117,8 @@ $(call inherit-product, device/htc/lexikon/media_a1026.mk)
 # htc audio settings
 $(call inherit-product, device/htc/lexikon/media_htcaudio.mk)
 
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 PRODUCT_NAME := htc_lexikon
