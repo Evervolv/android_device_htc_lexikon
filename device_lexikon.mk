@@ -109,6 +109,11 @@ PRODUCT_PACKAGES += \
     sensors.lexikon \
     lights.lexikon
 
+# Broadcom firmware
+PRODUCT_PACKAGES += \
+    fw_bcm4329.bin \
+    fw_bcm4329_apsta.bin
+
 $(call inherit-product-if-exists, vendor/htc/lexikon/lexikon-vendor.mk)
 
 # media profiles and capabilities spec
