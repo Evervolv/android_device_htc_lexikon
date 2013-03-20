@@ -18,8 +18,7 @@
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # The gps config appropriate for this device
-PRODUCT_COPY_FILES += \
-    device/htc/lexikon/prebuilt/system/etc/gps.conf:system/etc/gps.conf
+$(call inherit-product, device/common/gps/gps_us.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/lexikon/overlay
 
