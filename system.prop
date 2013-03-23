@@ -22,6 +22,9 @@ ro.ril.enable.managed.roaming=1
 # world phone feature enabled
 ro.ril.wp.feature=1
 
+# legacy ril feature(s)
+ro.telephony.ril.v3=signalstrengthgsm
+
 # Default network type.
 # 4 => CDMA mode preferred.
 ro.telephony.default_network=4
